@@ -3,10 +3,10 @@ import logo from './logo/logo.png';
 import Typewriter from 'typewriter-effect';
 
 const App = () => {
-  const [timerDays, setTimerDays] = useState("00");
-  const [timerHours, setTimerHours] = useState("00");
-  const [timerMinut, setTimerMinut] = useState("00");
-  const [timerSecond, setTimerSecond] = useState("00");
+  const [timerDays, setTimerDays] = useState();
+  const [timerHours, setTimerHours] = useState();
+  const [timerMinut, setTimerMinut] = useState();
+  const [timerSecond, setTimerSecond] = useState();
   const [intervalId, setIntervalId] = useState(null);
 
   const startTimer = () => {
@@ -25,6 +25,9 @@ const App = () => {
         setTimerHours(String(hours).padStart(2, '0'));
         setTimerMinut(String(minutes).padStart(2, '0'));
         setTimerSecond(String(seconds).padStart(2, '0'));
+        console.log('ramazonDate:', ramazonDate);
+        console.log('now:', now);
+        console.log('distance:', distance);
       } else {
         clearInterval(interval);
       }
@@ -34,13 +37,25 @@ const App = () => {
   };
 
   useEffect(() => {
-    startTimer();
-    return () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
+    const startTimerAndSetIntervalId = () => {
+      startTimer(); 
+
+      const interval = setInterval(() => {
+      
+      }, 1000);
+
+      setIntervalId(interval); 
     };
-  }, [intervalId]);
+
+    startTimerAndSetIntervalId();
+
+    // Cleanup function
+    return () => {
+      clearInterval(intervalId); 
+    };
+  }, []); 
+
+
 
   return (
     <div className='flex flex-col h-[100vh] '>
