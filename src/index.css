@@ -14,6 +14,7 @@ body {
   background-size: cover;
   backdrop-filter: blur(10px);
   width: 100vw;
+  position: relative;
 }
 .kalam-bold {
   font-family: "Kalam", cursive;

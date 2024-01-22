@@ -28,7 +28,7 @@ const App = () => {
         clearInterval(interval);
       }
     }, 1000);
-    
+
     setIntervalId(interval); // Save the interval id to state
   };
 
@@ -37,14 +37,14 @@ const App = () => {
     return () => clearInterval(intervalId); // Clear interval using stored id
   }, [intervalId]);
   return (
-    <div className='flex flex-col h-screen relative'>
+    <div className='flex flex-col h-[100vh]  '>
       <div className="navbar">
         <div className='flex flex-start gap-3 items-center p-3'>
           <img width={30} src={logo} alt="" />
           <h1 className='text-3xl text-[rgb(254,206,133)] font-bold '>Ramazon24</h1>
         </div>
       </div>
-      <div className="header flex justify-center items-center flex-col pt-[60px]">
+      <div className="header flex justify-center items-center flex-col pt-[60px] pb-[200px]">
         <h1 className='text-4xl text-white font-bold kalam-bold'>Ramazon 2024</h1>
         <p className='kalam-light flex flex-col justify-center items-center text-white max-sm:text-xl max-md:text-2xl max-sm:p-10 text-3xl pt-[30px]'>
           <Typewriter
@@ -76,15 +76,16 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className="footer flex flex-row items-center justify-between text-white p-3 left-0 bottom-0 absolute bg-[rgb(31,31,31)] w-full">
+      <div className="footer  fixed flex max-sm:flex-col mb-0 pb-0 items-center justify-between max-sm:justify-center  text-white p-3 left-0 bottom-0 bg-[rgb(31,31,31)] w-full">
         <div className="text ">
           <span>Copyright 2024 | Powered by </span><strong className='text-[rgb(254,206,133)]'> CoderBux</strong>
         </div>
-        <div className='flex flex-start gap-3 items-center p-3'>
+        <div className='flex  flex-start gap-3 items-center p-3'>
           <img width={30} src={logo} alt="" />
           <h1 className='text-3xl text-[rgb(254,206,133)] font-bold '>Ramazon24</h1>
         </div>
       </div>
+
     </div>
   );
 };
