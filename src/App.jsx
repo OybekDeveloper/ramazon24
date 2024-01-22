@@ -59,10 +59,10 @@ const App = () => {
 
   return (
     <div className='flex flex-col min-h-screen relative '>
-      <div className="navbar p-5 w-full ">
+      <div className="navbar py-5 w-full ">
         <div className='flex flex-start gap-3 items-center '>
           <img width={30} src={logo} alt="" />
-          <h1 className='text-2xl text-[rgb(254,206,133)] font-bold '>Ramazon24</h1>
+          <h1 className='text-3xl max-sm:text-2xl text-[rgb(254,206,133)] font-bold '>Ramazon24</h1>
         </div>
       </div>
       <div className="header flex justify-center items-center flex-col pt-[80px] max-sm:pt-[40px] pb-[200px]">
@@ -99,11 +99,11 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className="footer fixed flex max-sm:flex-col mb-0 pb-0 items-center justify-around max-sm:justify-center text-white p-3 left-0 bottom-0 w-full bg-[rgb(20,20,20)]">
+      <div className="footer fixed flex max-sm:flex-col mb-0 pb-0 items-center justify-around max-sm:justify-center text-white py-3 left-0 bottom-0 w-full bg-[rgb(20,20,20)]">
         <div className="text">
           <span>Copyright 2024 | Powered by </span><strong className='text-[rgb(254,206,133)]'> CoderBux</strong>
         </div>
-        <div className='flex  flex-start gap-3 items-center p-3'>
+        <div className='flex  flex-start gap-3 items-center py-3'>
           <img width={30} src={logo} alt="" />
           <h1 className='text-3xl text-[rgb(254,206,133)] font-bold '>Ramazon24</h1>
         </div>
