@@ -80,22 +80,22 @@ const App = () => {
             <span className='text-xl'></span>
           </p>
         </div>
-        <div className="timer text-white flex max-sm:grid  flex-row max-sm:grid-cols-2 justify-center items-center gap-24 text-8xl max-sm:text-7xl  pt-[50px]">
+        <div className="timer text-white flex max-sm:grid  flex-row max-sm:grid-cols-2 justify-center items-center gap-24 text-8xl max-sm:text-6xl  pt-[50px]">
           <div className="day flex flex-col justify-center items-center">
             <span>{timerDays ? timerDays : "00"}</span>
-            <span className='text-4xl pt-[20px]'>kun</span>
+            <span className='text-4xl max-sm:text-2xl pt-[20px]'>kun</span>
           </div>
           <div className="hour flex flex-col justify-center items-center">
             <span>{timerHours ? timerHours : "00"}</span>
-            <span className='text-4xl pt-[20px]'>soat</span>
+            <span className='text-4xl max-sm:text-2xl pt-[20px]'>soat</span>
           </div>
           <div className="minut flex flex-col justify-center items-center">
             <span>{timerMinut ? timerMinut : "00"}</span>
-            <span className='text-4xl pt-[20px]'>minut</span>
+            <span className='text-4xl max-sm:text-2xl pt-[20px]'>minut</span>
           </div>
           <div className="secound flex flex-col justify-center items-center">
             <span>{timerSecond ? timerSecond : "00"}</span>
-            <span className='text-4xl pt-[20px]'>soniya</span>
+            <span className='text-4xl max-sm:text-2xl'>soniya</span>
           </div>
         </div>
       </div>
