@@ -38,27 +38,27 @@ const App = () => {
 
   useEffect(() => {
     const startTimerAndSetIntervalId = () => {
-      startTimer(); 
+      startTimer();
 
       const interval = setInterval(() => {
-      
+
       }, 1000);
 
-      setIntervalId(interval); 
+      setIntervalId(interval);
     };
 
     startTimerAndSetIntervalId();
 
     // Cleanup function
     return () => {
-      clearInterval(intervalId); 
+      clearInterval(intervalId);
     };
-  }, []); 
+  }, []);
 
 
 
   return (
-    <div className='flex flex-col h-[100vh] '>
+    <div className='flex flex-col min-h-screen relative '>
       <div className="navbar p-5 w-full">
         <div className='flex flex-start gap-3 items-center '>
           <img width={30} src={logo} alt="" />
@@ -80,24 +80,24 @@ const App = () => {
         </p>
         <div className="timer text-white flex max-sm:grid  flex-row max-sm:grid-cols-2 justify-center items-center gap-24 text-8xl max-sm:text-7xl  pt-[40px]">
           <div className="day flex flex-col justify-center items-center">
-            <span>{timerDays}</span>
+            <span>{timerDays?timerDays :"00"}</span>
             <span className='text-4xl pt-[20px]'>kun</span>
           </div>
           <div className="hour flex flex-col justify-center items-center">
-            <span>{timerHours}</span>
+            <span>{timerHours?timerHours :"00"}</span>
             <span className='text-4xl pt-[20px]'>soat</span>
           </div>
           <div className="minut flex flex-col justify-center items-center">
-            <span>{timerMinut}</span>
+            <span>{timerMinut?timerMinut :"00"}</span>
             <span className='text-4xl pt-[20px]'>mint</span>
           </div>
           <div className="secound flex flex-col justify-center items-center">
-            <span>{timerSecond}</span>
+            <span>{timerSecond?timerSecond :"00"}</span>
             <span className='text-4xl pt-[20px]'>soniya</span>
           </div>
         </div>
       </div>
-      <div className="footer fixed flex max-sm:flex-col mb-0 pb-0 items-center justify-between max-sm:justify-center text-white p-3 left-0 bottom-0 bg-[rgb(31,31,31)] w-full">
+      <div className="footer fixed flex max-sm:flex-col mb-0 pb-0 items-center justify-around max-sm:justify-center text-white p-3 left-0 bottom-0 w-full bg-[rgb(20,20,20)]">
         <div className="text">
           <span>Copyright 2024 | Powered by </span><strong className='text-[rgb(254,206,133)]'> CoderBux</strong>
         </div>
@@ -106,6 +106,7 @@ const App = () => {
           <h1 className='text-3xl text-[rgb(254,206,133)] font-bold '>Ramazon24</h1>
         </div>
       </div>
+
     </div>
   );
 };
