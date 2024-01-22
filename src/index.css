@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: url("https://pxwall.com/wp-content/uploads/2018/05/Free-Islamic-Wallpaper-Hd-Images-For-Pc.jpg");
+  background-image: url('./logo/background.jpg');
   /* Replace with your new image URL */
   background-size: cover;
   backdrop-filter: blur(10px);
