@@ -91,7 +91,7 @@ const App = () => {
           </div>
           <div className="minut flex flex-col justify-center items-center">
             <span>{timerMinut ? timerMinut : "00"}</span>
-            <span className='text-4xl pt-[20px]'>mint</span>
+            <span className='text-4xl pt-[20px]'>minut</span>
           </div>
           <div className="secound flex flex-col justify-center items-center">
             <span>{timerSecond ? timerSecond : "00"}</span>
