@@ -65,7 +65,7 @@ const App = () => {
           <h1 className='text-3xl max-sm:text-2xl text-[rgb(254,206,133)] font-bold '>Ramazon24</h1>
         </div>
       </div>
-      <div className="header flex justify-center items-center flex-col pt-[80px] max-sm:pt-[40px] pb-[200px]">
+      <div className="header flex justify-center items-center flex-col pt-[80px] max-sm:pt-[40px] pb-[100px]">
         <h1 className='text-5xl text-white font-bold kalam-bold'>Ramazon 2024</h1>
         <div className="typewriter-container h-[120px]">
           <p className='kalam-light flex flex-col justify-center items-center text-white max-sm:text-2l max-md:text-3xl max-sm:p-10 text-4xl pt-[50px]'>
