@@ -10,6 +10,7 @@
 
 body {
   background-image: url('./logo/background.jpg');
+  background-position: center;
   /* Replace with your new image URL */
   background-size: cover;
   backdrop-filter: blur(10px);
