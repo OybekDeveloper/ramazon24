@@ -8,11 +8,12 @@ const App = () => {
   const [timerMinut, setTimerMinut] = useState("00");
   const [timerSecond, setTimerSecond] = useState("00");
   const [intervalId, setIntervalId] = useState(null);
+
   const startTimer = () => {
-    const ramazonDate = new Date('March 11, 2024 00:00:00').getTime();
+    const ramazonDate = new Date('2024-03-11T00:00:00').getTime();
 
     const interval = setInterval(() => {
-      const now = new Date().getTime(); // Corrected: use getTime() to get current time in milliseconds
+      const now = new Date().getTime();
       const distance = ramazonDate - now;
 
       if (distance > 0) {
@@ -29,24 +30,29 @@ const App = () => {
       }
     }, 1000);
 
-    setIntervalId(interval); // Save the interval id to state
+    setIntervalId(interval);
   };
 
   useEffect(() => {
     startTimer();
-    return () => clearInterval(intervalId); // Clear interval using stored id
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
   }, [intervalId]);
+
   return (
-    <div className='flex flex-col h-[100vh]  '>
-      <div className="navbar">
-        <div className='flex flex-start gap-3 items-center p-3'>
+    <div className='flex flex-col h-[100vh] '>
+      <div className="navbar p-5 w-full">
+        <div className='flex flex-start gap-3 items-center '>
           <img width={30} src={logo} alt="" />
-          <h1 className='text-3xl text-[rgb(254,206,133)] font-bold '>Ramazon24</h1>
+          <h1 className='text-2xl text-[rgb(254,206,133)] font-bold '>Ramazon24</h1>
         </div>
       </div>
-      <div className="header flex justify-center items-center flex-col pt-[60px] pb-[200px]">
-        <h1 className='text-4xl text-white font-bold kalam-bold'>Ramazon 2024</h1>
-        <p className='kalam-light flex flex-col justify-center items-center text-white max-sm:text-xl max-md:text-2xl max-sm:p-10 text-3xl pt-[30px]'>
+      <div className="header flex justify-center items-center flex-col pt-[80px] pb-[200px]">
+        <h1 className='text-5xl text-white font-bold kalam-bold'>Ramazon 2024</h1>
+        <p className='kalam-light flex flex-col justify-center items-center text-white max-sm:text-xl max-md:text-2xl max-sm:p-10 text-3xl pt-[50px]'>
           <Typewriter
             options={{
               autoStart: true,
@@ -55,7 +61,7 @@ const App = () => {
               strings: ["Assalomu Alaykum va Rahmatulloh va Barakatuh.", "Muborak Ramazon oyigacha qolgan vaqt:"]
             }}
           />
-          <span className='text-xl '></span>
+          <span className='text-xl'></span>
         </p>
         <div className="timer text-white flex max-sm:grid  flex-row max-sm:grid-cols-2 justify-center items-center gap-24 text-8xl max-sm:text-7xl  pt-[40px]">
           <div className="day flex flex-col justify-center items-center">
@@ -76,8 +82,8 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className="footer  fixed flex max-sm:flex-col mb-0 pb-0 items-center justify-between max-sm:justify-center  text-white p-3 left-0 bottom-0 bg-[rgb(31,31,31)] w-full">
-        <div className="text ">
+      <div className="footer fixed flex max-sm:flex-col mb-0 pb-0 items-center justify-between max-sm:justify-center text-white p-3 left-0 bottom-0 bg-[rgb(31,31,31)] w-full">
+        <div className="text">
           <span>Copyright 2024 | Powered by </span><strong className='text-[rgb(254,206,133)]'> CoderBux</strong>
         </div>
         <div className='flex  flex-start gap-3 items-center p-3'>
@@ -85,7 +91,6 @@ const App = () => {
           <h1 className='text-3xl text-[rgb(254,206,133)] font-bold '>Ramazon24</h1>
         </div>
       </div>
-
     </div>
   );
 };
