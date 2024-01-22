@@ -65,7 +65,7 @@ const App = () => {
           <h1 className='text-2xl text-[rgb(254,206,133)] font-bold '>Ramazon24</h1>
         </div>
       </div>
-      <div className="header flex justify-center items-center flex-col pt-[80px] pb-[200px]">
+      <div className="header flex justify-center items-center flex-col pt-[80px] max-sm:pt-[40px] pb-[200px]">
         <h1 className='text-5xl text-white font-bold kalam-bold'>Ramazon 2024</h1>
         <div className="typewriter-container h-[120px]">
           <p className='kalam-light flex flex-col justify-center items-center text-white max-sm:text-2l max-md:text-3xl max-sm:p-10 text-4xl pt-[50px]'>
@@ -80,7 +80,7 @@ const App = () => {
             <span className='text-xl'></span>
           </p>
         </div>
-        <div className="timer text-white flex max-sm:grid  flex-row max-sm:grid-cols-2 justify-center items-center gap-24 text-8xl max-sm:text-7xl  pt-[40px]">
+        <div className="timer text-white flex max-sm:grid  flex-row max-sm:grid-cols-2 justify-center items-center gap-24 text-8xl max-sm:text-7xl  pt-[50px]">
           <div className="day flex flex-col justify-center items-center">
             <span>{timerDays ? timerDays : "00"}</span>
             <span className='text-4xl pt-[20px]'>kun</span>
