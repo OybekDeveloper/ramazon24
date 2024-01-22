@@ -59,7 +59,7 @@ const App = () => {
 
   return (
     <div className='flex flex-col min-h-screen relative '>
-      <div className="navbar p-5 w-full">
+      <div className="navbar p-5 w-full ">
         <div className='flex flex-start gap-3 items-center '>
           <img width={30} src={logo} alt="" />
           <h1 className='text-2xl text-[rgb(254,206,133)] font-bold '>Ramazon24</h1>
@@ -67,32 +67,34 @@ const App = () => {
       </div>
       <div className="header flex justify-center items-center flex-col pt-[80px] pb-[200px]">
         <h1 className='text-5xl text-white font-bold kalam-bold'>Ramazon 2024</h1>
-        <p className='kalam-light flex flex-col justify-center items-center text-white max-sm:text-xl max-md:text-2xl max-sm:p-10 text-3xl pt-[50px]'>
-          <Typewriter
-            options={{
-              autoStart: true,
-              loop: true,
-              delay: 80,
-              strings: ["Assalomu Alaykum va Rahmatulloh va Barakatuh.", "Muborak Ramazon oyigacha qolgan vaqt:"]
-            }}
-          />
-          <span className='text-xl'></span>
-        </p>
+        <div className="typewriter-container h-[120px]">
+          <p className='kalam-light flex flex-col justify-center items-center text-white max-sm:text-2l max-md:text-3xl max-sm:p-10 text-4xl pt-[50px]'>
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: true,
+                delay: 80,
+                strings: ["Assalomu Alaykum va Rahmatulloh va Barakatuh.", "Muborak Ramazon oyigacha qolgan vaqt:"]
+              }}
+            />
+            <span className='text-xl'></span>
+          </p>
+        </div>
         <div className="timer text-white flex max-sm:grid  flex-row max-sm:grid-cols-2 justify-center items-center gap-24 text-8xl max-sm:text-7xl  pt-[40px]">
           <div className="day flex flex-col justify-center items-center">
-            <span>{timerDays?timerDays :"00"}</span>
+            <span>{timerDays ? timerDays : "00"}</span>
             <span className='text-4xl pt-[20px]'>kun</span>
           </div>
           <div className="hour flex flex-col justify-center items-center">
-            <span>{timerHours?timerHours :"00"}</span>
+            <span>{timerHours ? timerHours : "00"}</span>
             <span className='text-4xl pt-[20px]'>soat</span>
           </div>
           <div className="minut flex flex-col justify-center items-center">
-            <span>{timerMinut?timerMinut :"00"}</span>
+            <span>{timerMinut ? timerMinut : "00"}</span>
             <span className='text-4xl pt-[20px]'>mint</span>
           </div>
           <div className="secound flex flex-col justify-center items-center">
-            <span>{timerSecond?timerSecond :"00"}</span>
+            <span>{timerSecond ? timerSecond : "00"}</span>
             <span className='text-4xl pt-[20px]'>soniya</span>
           </div>
         </div>
