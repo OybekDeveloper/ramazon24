@@ -68,7 +68,7 @@ const App = () => {
       <div className="header flex justify-center items-center flex-col pt-[80px] max-sm:pt-[40px] pb-[100px]">
         <h1 className='text-5xl text-white font-bold kalam-bold'>Ramazon 2024</h1>
         <div className="typewriter-container h-[120px]">
-          <p className='kalam-light flex flex-col justify-center items-center text-white max-sm:text-2l max-md:text-3xl max-sm:p-10 text-4xl pt-[50px]'>
+          <p className='kalam-light flex flex-col justify-center items-center text-white max-sm:text-2xl max-md:text-3xl max-sm:p-10 text-4xl pt-[50px]'>
             <Typewriter
               options={{
                 autoStart: true,
@@ -80,20 +80,31 @@ const App = () => {
             <span className='text-xl'></span>
           </p>
         </div>
-        <div className="timer text-white flex max-sm:grid  flex-row max-sm:grid-cols-2 justify-center items-center gap-24 text-8xl max-sm:text-6xl  pt-[50px]">
+        <div className="timer text-white flex max-sm:flex-col  flex-row max-sm:grid-cols-2 justify-center items-center gap-24 max-sm:gap-10 text-8xl max-sm:text-6xl  pt-[50px] max-sm:pt-[20px]">
           <div className="day flex flex-col justify-center items-center">
             <span>{timerDays ? timerDays : "00"}</span>
             <span className='text-4xl max-sm:text-2xl pt-[20px]'>kun</span>
           </div>
-          <div className="hour flex flex-col justify-center items-center">
+          <div className='max-sm:flex hidden justify-center items-center gap-4 text-4xl'>
+            <div className=" hour flex flex-col justify-center items-center">
+              <span>{timerHours ? timerHours : "00"} :</span>
+            </div>
+            <div className=" minut flex flex-col justify-center items-center">
+              <span>{timerMinut ? timerMinut : "00"} :</span>
+            </div>
+            <div className=" secound flex flex-col justify-center items-center">
+              <span>{timerSecond ? timerSecond : "00"}</span>
+              </div>
+          </div>
+          <div className="max-sm:hidden hour flex flex-col justify-center items-center">
             <span>{timerHours ? timerHours : "00"}</span>
             <span className='text-4xl max-sm:text-2xl pt-[20px]'>soat</span>
           </div>
-          <div className="minut flex flex-col justify-center items-center">
+          <div className="max-sm:hidden minut flex flex-col justify-center items-center">
             <span>{timerMinut ? timerMinut : "00"}</span>
             <span className='text-4xl max-sm:text-2xl pt-[20px]'>minut</span>
           </div>
-          <div className="secound flex flex-col justify-center items-center">
+          <div className="max-sm:hidden secound flex flex-col justify-center items-center">
             <span>{timerSecond ? timerSecond : "00"}</span>
             <span className='text-4xl max-sm:text-2xl'>soniya</span>
           </div>
